@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy – Kalikxo Uploader</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single readable column; a small sticky index switches between the two documents by anchor */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --ink: #1b2330;
+  --muted: #5a6577;
+  --line: #dde2ea;
+  --accent: #2d5bd6;
+  --font-body: "IBM Plex Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", Consolas, "Courier New", monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11151c; --surface: #181e27; --ink: #e6eaf1; --muted: #9aa5b6; --line: #2a3340; --accent: #8aa8ff;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11151c; --surface: #181e27; --ink: #e6eaf1; --muted: #9aa5b6; --line: #2a3340; --accent: #8aa8ff;
+  color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 16px; line-height: 1.65;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 40px 64px;
+}
+.wrap { max-width: 44rem; margin: 0 auto; display: grid; gap: 32px; }
+header { display: grid; gap: 8px; }
+.app { font-family: var(--font-mono); font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+h1 { font-size: 2rem; line-height: 1.2; margin: 0; font-weight: 600; text-wrap: balance; }
+.lead { margin: 0; color: var(--muted); }
+nav { display: flex; flex-wrap: wrap; gap: 8px; }
+nav a {
+  font-family: var(--font-mono); font-size: 14px; text-decoration: none;
+  color: var(--accent); border: 1px solid var(--line); background: var(--surface);
+  padding: 6px 12px; border-radius: 6px;
+}
+nav a:hover, nav a:focus-visible { border-color: var(--accent); outline: none; }
+section.doc {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  padding: 28px clamp(18px, 4vw, 36px); display: grid; gap: 4px; scroll-margin-top: 16px;
+}
+h2 { font-size: 1.5rem; margin: 0 0 4px; font-weight: 600; text-wrap: balance; }
+h3 { font-size: 1.05rem; margin: 20px 0 0; font-weight: 600; }
+p, ul { margin: 6px 0 0; }
+ul { padding-left: 1.25rem; display: grid; gap: 4px; }
+.meta { font-family: var(--font-mono); font-size: 13px; color: var(--muted); margin: 0 0 8px; }
+code { font-family: var(--font-mono); font-size: .9em; background: var(--bg); border: 1px solid var(--line); padding: 1px 5px; border-radius: 4px; }
+a { color: var(--accent); }
+footer { color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="app">Kalikxo Uploader</div>
+    <h1>Privacy Policy</h1>
+    <p class="lead">Kalikxo Uploader is a personal desktop tool that publishes the owner's own animated videos to the owner's own TikTok account through the official TikTok Content Posting API.</p>
+    <nav aria-label="Documents">
+      <a href="index.html">Home</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </header>
+  <section class="doc" id="privacy">
+    <h2>Privacy Policy</h2>
+    <p class="meta">Effective date: November 2, 2026</p>
+
+    <h3>1. Data the app accesses</h3>
+    <ul>
+      <li><strong>Basic profile</strong> (<code>user.info.basic</code>): your TikTok display name and open ID, used only to confirm which account is connected.</li>
+      <li><strong>Posting permissions</strong> (<code>video.publish</code>, <code>video.upload</code>): used only to upload the videos you queued and read their publishing status.</li>
+      <li><strong>Access and refresh tokens</strong> issued by TikTok after you approve the connection.</li>
+    </ul>
+
+    <h3>2. Where the data is stored</h3>
+    <p>Everything stays on your own computer, in the app's folder: the tokens, the list of videos with captions, and a log of what was published. The app has no server and no database of its own.</p>
+
+    <h3>3. Who receives the data</h3>
+    <p>The app communicates only with TikTok's official API (<code>open.tiktokapis.com</code>) to log in and upload your videos. No data is sold, shared with third parties, or used for advertising or analytics.</p>
+
+    <h3>4. How long it is kept</h3>
+    <p>Tokens are kept until they expire, until you revoke access in TikTok, or until you delete the app's folder. Deleting the folder removes all data the app stored.</p>
+
+    <h3>5. Your choices</h3>
+    <ul>
+      <li>Revoke access at any time in TikTok: <code>Settings and privacy → Security → Manage app permissions</code>.</li>
+      <li>Delete the file <code>tokeny.json</code> to remove the stored tokens immediately.</li>
+    </ul>
+
+    <h3>6. Children</h3>
+    <p>The app does not knowingly collect data from anyone. It is used only by its owner with their own account.</p>
+
+    <h3>7. Changes</h3>
+    <p>This policy may be updated. The effective date above shows the latest version.</p>
+  </section>
+  <footer>Kalikxo Uploader · personal tool for publishing original cartoons to TikTok</footer>
+</div>
+</body>
+</html>
