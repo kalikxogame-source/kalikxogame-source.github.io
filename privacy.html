@@ -65,7 +65,7 @@ footer { color: var(--muted); font-size: 14px; }
   <header>
     <div class="app">Kalikxo Uploader</div>
     <h1>Privacy Policy</h1>
-    <p class="lead">Kalikxo Uploader is a personal desktop tool that publishes the owner's own animated videos to the owner's own TikTok account through the official TikTok Content Posting API.</p>
+    <p class="lead">Kalikxo Uploader is a personal desktop tool that publishes the owner's own animated videos to the owner's own TikTok account and YouTube channel through the official TikTok Content Posting API and YouTube API Services.</p>
     <nav aria-label="Documents">
       <a href="index.html">Home</a>
       <a href="terms.html">Terms of Service</a>
@@ -74,28 +74,32 @@ footer { color: var(--muted); font-size: 14px; }
   </header>
   <section class="doc" id="privacy">
     <h2>Privacy Policy</h2>
-    <p class="meta">Effective date: November 2, 2026</p>
+    <p class="meta">Effective date: November 8, 2026</p>
 
     <h3>1. Data the app accesses</h3>
     <ul>
       <li><strong>Basic profile</strong> (<code>user.info.basic</code>): your TikTok display name and open ID, used only to confirm which account is connected.</li>
       <li><strong>Posting permissions</strong> (<code>video.publish</code>, <code>video.upload</code>): used only to upload the videos you queued and read their publishing status.</li>
       <li><strong>Access and refresh tokens</strong> issued by TikTok after you approve the connection.</li>
+      <li><strong>YouTube (Google) account</strong>: the app uses <strong>YouTube API Services</strong>. With the scope <code>youtube.upload</code> it uploads the owner's videos to the owner's own YouTube channel as Shorts; with <code>youtube.readonly</code> it reads only the channel name to confirm which channel is connected. It stores the OAuth refresh token Google issues. It does not read, collect, or change any other YouTube or Google data.</li>
     </ul>
 
     <h3>2. Where the data is stored</h3>
-    <p>Everything stays on your own computer, in the app's folder: the tokens, the list of videos with captions, and a log of what was published. The app has no server and no database of its own.</p>
+    <p>The tokens, the list of videos with captions, and a log of what was published are kept in the app's folder on the owner's computer. For scheduled publishing while the computer is off, the same tokens are also kept in the owner's own private GitHub repository, encrypted (PBKDF2 + HMAC-SHA256), and are decrypted only during the owner's scheduled job. The app has no public server and no database of its own.</p>
 
     <h3>3. Who receives the data</h3>
-    <p>The app communicates only with TikTok's official API (<code>open.tiktokapis.com</code>) to log in and upload your videos. No data is sold, shared with third parties, or used for advertising or analytics.</p>
+    <p>The app communicates only with TikTok's official API (<code>open.tiktokapis.com</code>) and Google's official APIs (<code>oauth2.googleapis.com</code>, <code>www.googleapis.com</code>) to log in and upload the owner's videos. No data is sold, shared with third parties, or used for advertising or analytics.</p>
+    <p>By using the YouTube features you are also subject to the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a> and the <a href="https://www.youtube.com/t/terms" rel="noopener">YouTube Terms of Service</a>.</p>
 
     <h3>4. How long it is kept</h3>
-    <p>Tokens are kept until they expire, until you revoke access in TikTok, or until you delete the app's folder. Deleting the folder removes all data the app stored.</p>
+    <p>Tokens are kept until they expire, until you revoke access in TikTok or Google, or until you delete the app's folder and the private repository. Deleting them removes all data the app stored.</p>
 
     <h3>5. Your choices</h3>
     <ul>
       <li>Revoke access at any time in TikTok: <code>Settings and privacy → Security → Manage app permissions</code>.</li>
-      <li>Delete the file <code>tokeny.json</code> to remove the stored tokens immediately.</li>
+      <li>Revoke YouTube/Google access at any time on the <a href="https://security.google.com/settings/security/permissions" rel="noopener">Google security settings page</a>.</li>
+      <li>Delete the files <code>tokeny.json</code> and <code>youtube_tokeny.json</code> to remove the stored tokens immediately.</li>
+      <li>Questions: <a href="mailto:kalikxogame@gmail.com">kalikxogame@gmail.com</a>.</li>
     </ul>
 
     <h3>6. Children</h3>
@@ -104,7 +108,7 @@ footer { color: var(--muted); font-size: 14px; }
     <h3>7. Changes</h3>
     <p>This policy may be updated. The effective date above shows the latest version.</p>
   </section>
-  <footer>Kalikxo Uploader · personal tool for publishing original cartoons to TikTok</footer>
+  <footer>Kalikxo Uploader · personal tool for publishing original cartoons to TikTok and YouTube</footer>
 </div>
 </body>
 </html>
