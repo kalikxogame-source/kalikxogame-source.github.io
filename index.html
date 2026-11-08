@@ -65,73 +65,25 @@ footer { color: var(--muted); font-size: 14px; }
   <header>
     <div class="app">Kalikxo Uploader</div>
     <h1>Kalikxo Uploader</h1>
-    <p class="lead">Kalikxo Uploader is a personal desktop tool that publishes the owner's own animated videos to the owner's own TikTok account and YouTube channel through the official TikTok Content Posting API and YouTube API Services.</p>
+    <p class="lead">A personal desktop tool that publishes the owner's own original animated cartoon episodes to the owner's own TikTok account and YouTube channel, on a schedule, through the official TikTok Content Posting API and YouTube API Services.</p>
     <nav aria-label="Documents">
       <a href="index.html">Home</a>
       <a href="terms.html">Terms of Service</a>
       <a href="privacy.html">Privacy Policy</a>
     </nav>
   </header>
-  <section class="doc" id="terms">
-    <h2>Terms of Service</h2>
-    <p class="meta">Effective date: November 2, 2026</p>
-
-    <h3>1. What the app does</h3>
-    <p>Kalikxo Uploader runs on the owner's own Windows computer. It uploads video files that the owner created, together with their captions and hashtags, to the TikTok account that the owner connected through TikTok Login Kit. It can post directly or send the video to the TikTok inbox as a draft, according to the owner's settings.</p>
-
-    <h3>2. Who may use it</h3>
-    <p>The app is intended for use by its owner with their own TikTok account. It is not a public service, it has no sign-up, and it does not post on behalf of other people.</p>
-
-    <h3>3. Your content</h3>
-    <p>You must own, or have the rights to, every video and caption you publish with the app. You remain responsible for your content and for following the <a href="https://www.tiktok.com/legal/terms-of-service" rel="noopener">TikTok Terms of Service</a> and <a href="https://www.tiktok.com/community-guidelines" rel="noopener">Community Guidelines</a>.</p>
-
-    <h3>4. Acceptable use</h3>
+  <section class="doc">
+    <h2>What it does</h2>
     <ul>
-      <li>Do not use the app to post spam, misleading content, or content you do not have rights to.</li>
-      <li>Do not try to bypass TikTok's posting limits or privacy settings.</li>
-      <li>Do not share your app keys or access tokens with anyone.</li>
+      <li>Keeps a queue of the owner's finished episodes with titles, descriptions and hashtags.</li>
+      <li>At the scheduled time uploads the next episode to TikTok (Content Posting API) and to YouTube as a Short (YouTube Data API <code>videos.insert</code>).</li>
+      <li>Reads only the connected channel's name (<code>channels.list?mine=true</code>) to show which channel is linked.</li>
+      <li>Used only by its owner, with the owner's own accounts. No sign-up, no other users, no public service.</li>
     </ul>
-
-    <h3>5. Availability</h3>
-    <p>The app is provided as is, without warranties. Publishing depends on TikTok's services, which may change, limit, or reject uploads. The developer is not responsible for content that TikTok removes or for interruptions in TikTok's services.</p>
-
-    <h3>6. Disconnecting</h3>
-    <p>You can stop using the app at any time by turning off its scheduled task and revoking its access in TikTok: <code>Settings and privacy → Security → Manage app permissions</code>.</p>
-
-    <h3>7. Changes</h3>
-    <p>These terms may be updated. The effective date above shows the latest version.</p>
-  </section>
-  <section class="doc" id="privacy">
-    <h2>Privacy Policy</h2>
-    <p class="meta">Effective date: November 2, 2026</p>
-
-    <h3>1. Data the app accesses</h3>
-    <ul>
-      <li><strong>Basic profile</strong> (<code>user.info.basic</code>): your TikTok display name and open ID, used only to confirm which account is connected.</li>
-      <li><strong>Posting permissions</strong> (<code>video.publish</code>, <code>video.upload</code>): used only to upload the videos you queued and read their publishing status.</li>
-      <li><strong>Access and refresh tokens</strong> issued by TikTok after you approve the connection.</li>
-    </ul>
-
-    <h3>2. Where the data is stored</h3>
-    <p>Everything stays on your own computer, in the app's folder: the tokens, the list of videos with captions, and a log of what was published. The app has no server and no database of its own.</p>
-
-    <h3>3. Who receives the data</h3>
-    <p>The app communicates only with TikTok's official API (<code>open.tiktokapis.com</code>) to log in and upload your videos. No data is sold, shared with third parties, or used for advertising or analytics.</p>
-
-    <h3>4. How long it is kept</h3>
-    <p>Tokens are kept until they expire, until you revoke access in TikTok, or until you delete the app's folder. Deleting the folder removes all data the app stored.</p>
-
-    <h3>5. Your choices</h3>
-    <ul>
-      <li>Revoke access at any time in TikTok: <code>Settings and privacy → Security → Manage app permissions</code>.</li>
-      <li>Delete the file <code>tokeny.json</code> to remove the stored tokens immediately.</li>
-    </ul>
-
-    <h3>6. Children</h3>
-    <p>The app does not knowingly collect data from anyone. It is used only by its owner with their own account.</p>
-
-    <h3>7. Changes</h3>
-    <p>This policy may be updated. The effective date above shows the latest version.</p>
+    <h3>YouTube API Services</h3>
+    <p>This app uses YouTube API Services. By using its YouTube features you agree to the <a href="https://www.youtube.com/t/terms" rel="noopener">YouTube Terms of Service</a>; data is handled under the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>. Access can be revoked at any time on the <a href="https://security.google.com/settings/security/permissions" rel="noopener">Google security settings page</a>. See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.</p>
+    <h3>Contact</h3>
+    <p><a href="mailto:kalikxogame@gmail.com">kalikxogame@gmail.com</a></p>
   </section>
   <footer>Kalikxo Uploader · personal tool for publishing original cartoons to TikTok and YouTube</footer>
 </div>
